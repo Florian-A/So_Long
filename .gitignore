@@ -1,0 +1,9 @@
+*.o
+*.a
+.DS_Store
+libmlx.dylib
+utest
+so_long
+so_long-bonus
+minilibx-mms/*.json
+*.log
