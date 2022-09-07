@@ -1,4 +1,4 @@
-<h1 align="center">So_long</h1>
+<h1 align="center">So_Long</h1>
 
 <div align="center"><img src="./img/video4.gif" /></div>
 
