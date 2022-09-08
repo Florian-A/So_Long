@@ -1,0 +1,9 @@
+*.o
+*.a
+.DS_Store
+*.out
+test.c
+.vscode
+unit_test
+.utest/*.o
+utest
