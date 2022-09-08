@@ -1,0 +1,18 @@
+name: unit test + build 
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [macos-latest]
+        swift: ["5.5"]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v3
+      
+    - name: unit test + build
+      run: make test DEBUG=1 && ./libft/utest && ./utest && make fclean && make && make fclean && make bonus
