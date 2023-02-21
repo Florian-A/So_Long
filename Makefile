@@ -6,7 +6,7 @@
 #    By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 12:33:02 by f██████           #+#    #+#              #
-#    Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr    #
+#    Updated: 2023/02/21 01:07:54 by f██████          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,59 +51,61 @@ CC = gcc
 MF = Makefile
 
 ifeq ($(DEBUG), 1)
-FLAGS = -Wall -Wextra -Werror -fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 else
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 endif
 
-ifeq ($(LIB), 1)
-MINILIBFX_PATH = ./minilibx-opengl/libmlx.a
-LIB_FLAGS = -l z
-else
-MINILIBFX_PATH = ./libmlx.dylib
-LIB_FLAGS =
-endif
-
-LIBFT_PATH = ./libft/libft.a
-LIBTEST_PATH = ./libft/libtest.a
-MINILIBFX_OPENGL_PATH = ./minilibx-opengl/libmlx.a
-MINILIBFX_MMS_PATH = ./libmlx.dylib
 NAME = so_long
 NAME_BONUS = so_long-bonus
+LIBFT_PATH = ./libft/libft.a
+LIBTEST_PATH = ./libft/libtest.a
 SL_HEADER_FILE = $(INC_DIR)/so_long.h
 UTEST_NAME = utest
 UTEST_HEADER_FILE = $(INC_DIR)/utest.h
 
-all : _libft _minilibx_mms $(NAME)
 
-$(NAME) : $(MF) $(OBJS_BONUSOFF) $(OBJS_SL) $(LIBFT_PATH) $(MINILIBFX_PATH)
-	@$(CC) $(FLAGS) $(OBJS_BONUSOFF) $(OBJS_SL) $(LIBFT_PATH) $(MINILIBFX_PATH) -framework OpenGL -framework Appkit $(LIB_FLAGS) -o $(NAME) 
+ifeq ($(OS),Darwin)
+  GFLAGS = -framework OpenGL -framework Appkit -l z
+  GPATH = ./mlx-mms/
+  MLX_PATH = $(GPATH)/libmlx.dylib
+else
+  GFLAGS = -lXext -lX11 -lm -lbsd
+  GPATH = ./mlx-linux/
+  MLX_PATH = $(GPATH)/libmlx_Linux.a
+endif
+
+
+all : _libft _mlx $(NAME)
+
+$(NAME) : $(MF) $(OBJS_BONUSOFF) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH)
+	@$(CC) $(CFLAGS) $(OBJS_BONUSOFF) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH) $(GFLAGS) -o $(NAME) 
 	@echo "\n${GREEN}> Compilation of so_long is success 🎉${END}"
 
 bonus: _libft _minilibx_mms $(NAME_BONUS)
 
-$(NAME_BONUS) : $(MF) $(OBJS_BONUSON) $(OBJS_SL) $(LIBFT_PATH) $(MINILIBFX_PATH)
-	@$(CC) $(FLAGS) $(OBJS_BONUSON) $(OBJS_SL) $(LIBFT_PATH) $(MINILIBFX_PATH) -framework OpenGL -framework Appkit $(LIB_FLAGS) -o $(NAME_BONUS) 
+$(NAME_BONUS) : $(MF) $(OBJS_BONUSON) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH)
+	@$(CC) $(CFLAGS) $(OBJS_BONUSON) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH) -framework OpenGL -framework Appkit $(LIB_FLAGS) -o $(NAME_BONUS) 
 	@echo "\n${GREEN}> Compilation of so_long is success 🎉${END}"
 
 ./.utests/%.o : ./.utests/%.c $(UTEST_HEADER_FILE) $(MF)
 	@/bin/echo -n .
-	@$(CC) $(FLAGS) -c $< -o $@  -I $(INC_DIR) 
+	@$(CC) $(CFLAGS) -c $< -o $@  -I $(INC_DIR) 
 
 %.o : %.c $(SL_HEADER_FILE) $(MF)
 	@/bin/echo -n .
-	@$(CC) $(FLAGS) -c $< -o $@ -I $(INC_DIR)
+	@$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_DIR)
 
 clean :
 	@make clean -C ./libft
-	@make clean -C ./minilibx-mms
+	@make clean -C $(GPATH)
 	@rm -f $(OBJS_SL)
 	@rm -f $(OBJS_UTEST)
 	@echo "${YELLOW}> All objects files of so_long have been deleted ❌${END}"
 
 fclean : clean
 	@make fclean -C ./libft
-	@make fclean -C ./minilibx-mms
+	@make clean -C $(GPATH)
 	@rm -f $(NAME)
 	@rm -f $(UTEST_NAME)
 	@echo "${YELLOW}> Cleaning of so_long has been done ❌${END}"
@@ -116,14 +118,14 @@ _libft :
 _test :
 	@make test -C ./libft DEBUG=$(DEBUG)
 
-_minilibx_mms :
-	@make -C ./minilibx-mms
-	@cp ./minilibx-mms/libmlx.dylib ./libmlx.dylib
+_mlx :
+	make -C $(GPATH)
+	@cp $(MLX_PATH) .
 
-test: _libft _minilibx_mms _test $(UTEST_NAME)
+test: _libft _mlx _test $(UTEST_NAME)
 
 $(UTEST_NAME) : $(MF) $(OBJS_UTEST) $(LIBTEST_PATH) $(LIBFT_PATH)
-	@$(CC) $(FLAGS) $(OBJS_UTEST) $(LIBTEST_PATH) $(LIBFT_PATH) $(MINILIBFX_PATH) -o $(UTEST_NAME)
+	@$(CC) $(CFLAGS) $(OBJS_UTEST) $(LIBTEST_PATH) $(LIBFT_PATH) $(MLX_PATH) -o $(UTEST_NAME)
 	@echo "\n${GREEN}> Compilation of unit tests is success 🎉${END}"
 
 .PHONY:	all bonus clean fclean re lib

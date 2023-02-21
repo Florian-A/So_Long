@@ -6,7 +6,7 @@
 #    By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 11:45:53 by f██████           #+#    #+#              #
-#    Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr    #
+#    Updated: 2023/02/21 01:07:54 by f██████          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ ft_toupper.c \
 OBJS_LST = $(SRC_LST:.c=.o)
 SRC_LST	= $(addprefix $(SRC_DIR)/lst/, \
 ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c \
-ft_lstfirst.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c \
+ft_lstfirst.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c ft_lst_push.c \
 )
 
 # memory
@@ -54,10 +54,10 @@ ft_atoi.c ft_atol.c ft_itoa.c \
 # character string
 OBJS_STR = $(SRC_STR:.c=.o)
 SRC_STR	= $(addprefix $(SRC_DIR)/str/, \
-ft_split.c ft_strchr_i.c ft_strchr.c ft_strdup.c ft_strndup.c ft_striteri.c \
-ft_strjoin.c ft_strnjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c \
-ft_strcmp.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c \
-ft_isnbr.c \
+ft_split.c ft_strchr_i.c ft_strchr.c ft_strdup.c ft_strndup.c \
+ft_striteri.c ft_strjoin.c ft_strnjoin.c ft_strlcat.c ft_strlcpy.c \
+ft_strlen.c ft_strmapi.c ft_strcmp.c ft_strncmp.c ft_strnstr.c \
+ft_strnstr_i.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_isnbr.c \
 )
 
 # file descriptor
@@ -69,7 +69,7 @@ ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_putunbr_fd.c \
 # array
 OBJS_ARR = $(SRC_ARR:.c=.o)
 SRC_ARR	= $(addprefix $(SRC_DIR)/arr/, \
-ft_arr2dfree.c ft_arr2dlen.c \
+ft_arr2dfree.c ft_arr2dlen.c ft_arradd_str.c \
 )
 
 # printf
@@ -94,7 +94,8 @@ utest.c test_show_start.c test_show_result.c test_init_struct.c  \
 # unit tests
 OBJS_UTEST = $(SRC_UTEST:.c=.o)
 SRC_UTEST = $(addprefix $(SRC_DIR)/.utests/, \
-main.c test_ft_strlen.c test_ft_atoi.c test_ft_atol.c test_ft_bzero.c test_ft_calloc.c test_ft_isalnum.c \
+main.c test_ft_strlen.c test_ft_atoi.c test_ft_atol.c test_ft_bzero.c \
+test_ft_calloc.c test_ft_isalnum.c test_ft_arradd_str.c test_ft_str_repl.c \
 )
 
 SRC_DIR	= .

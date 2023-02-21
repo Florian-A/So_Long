@@ -6,7 +6,7 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:45:53 by f██████           #+#    #+#             */
-/*   Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/02/21 01:07:54 by f██████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ int		test_ft_atol(void);
 int		test_ft_bzero(void);
 int		test_ft_calloc(void);
 int		test_ft_isalnum(void);
+int		test_ft_arradd_str(void);
+int		test_ft_str_repl(void);
 
 #endif

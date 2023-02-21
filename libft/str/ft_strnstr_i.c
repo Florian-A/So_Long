@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_isalnum.c                                  :+:      :+:    :+:   */
+/*   ft_strnstr_i.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 00:40:56 by f██████           #+#    #+#             */
-/*   Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr   */
+/*   Created: 2021/11/02 16:09:35 by f██████           #+#    #+#             */
+/*   Updated: 2023/02/21 01:07:54 by f██████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/utest.h"
+#include "../includes/libft.h"
 
-int	test_ft_isalnum(void)
+int	ft_strnstr_i(const char *haystack, const char *needle, size_t len)
 {
-	char	s1[61];
-	int		i;
+	size_t	i;
+	int		j;
 
-	ft_strlcpy(s1, \
-	"ABCDEFHIJKLMNOPQRSTUVWYZabcdefghijklmnopkrstuvwxyz0123456789", 61);
+	if (ft_strlen(needle) < 1)
+		return (0);
 	i = 0;
-	while (i < 60)
+	while (haystack[i] && i < len)
 	{
-		if (ft_isalnum(s1[i]) != 1)
-			return (-1);
-		i++;
-	}
-	ft_strlcpy(s1, "`@[{}\201", 7);
-	i = 0;
-	while (i < 7)
-	{
-		if (ft_isalnum(s1[i]) != 0)
-			return (-1);
+		j = 0;
+		while (needle[j] == haystack[i + j] && i + j < len)
+		{
+			if (haystack[i + j] == needle[j])
+			{
+				if (needle[j + 1] == '\0')
+					return (i);
+			}
+			else
+				break ;
+			j++;
+		}
 		i++;
 	}
 	return (0);

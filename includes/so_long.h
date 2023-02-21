@@ -6,7 +6,7 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 11:45:53 by f██████           #+#    #+#             */
-/*   Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/02/21 01:07:54 by f██████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@
 # include <stdlib.h>
 
 # include "../libft/includes/libft.h"
-# include "../minilibx-mms/mlx.h"
+
+# ifdef __linux__
+#   include "../mlx-linux/mlx.h"
+#  elif __APPLE__
+#   include "../mlx-mms/mlx.h"
+# endif
 
 # define WINDOW_TITLE "so_long"
 # define WINDOW_WIDTH 1366
