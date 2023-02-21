@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_atol.c                                     :+:      :+:    :+:   */
+/*   ft_lst_push.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 00:40:56 by f██████           #+#    #+#             */
-/*   Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr   */
+/*   Created: 2021/11/02 16:09:35 by f██████           #+#    #+#             */
+/*   Updated: 2023/02/21 01:07:54 by f██████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "../includes/utest.h"
+#include "../includes/libft.h"
 
-int	test_ft_atol(void)
+t_list	*ft_lst_push(t_list *lst, void *content)
 {
-	char	*s1;
+	t_list	*new_lst;
 
-	s1 = "";
-	if (ft_atol(s1) != 0)
-		return (-1);
-	s1 = "9223372036854775807";
-	if (ft_atol(s1) != 9223372036854775807)
-		return (-1);
-	s1 = "-9223372036854775807";
-	if (ft_atol(s1) != -9223372036854775807)
-		return (-1);
-	return (0);
+	if (content == NULL)
+		return (NULL);
+	if (lst == NULL)
+	{
+		new_lst = ft_lstnew(content);
+		if (new_lst == NULL)
+			return (NULL);
+	}
+	else
+	{
+		new_lst = ft_lstnew(content);
+		if (new_lst == NULL)
+			return (NULL);
+		ft_lstadd_back(&lst, new_lst);
+	}
+	new_lst = ft_lstfirst(new_lst);
+	return (new_lst);
 }
