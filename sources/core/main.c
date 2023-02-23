@@ -6,7 +6,7 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 12:27:36 by f██████           #+#    #+#             */
-/*   Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/02/23 07:01:06 by f██████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,12 @@ static int	game_loop_mandatory(t_so_long *so_long)
 	return (1);
 }
 
+int	key_hook(void)
+{
+	ft_printf("Hello from key_hook!\n");
+	return (0);
+}
+
 // Initialization of the player/monster/scenery of the game and the MLX
 int	main(int argc, char *argv[], char **env)
 {
@@ -63,9 +69,11 @@ int	main(int argc, char *argv[], char **env)
 	init_player(&so_long);
 	init_camera(&so_long);
 	analyse_monster(&so_long);
-	mlx_hook(so_long.window, 17, 1L << 0, close_hook, &so_long);
-	mlx_hook(so_long.window, 2, 0, keydown_hook, &so_long);
-	mlx_key_hook(so_long.window, keyup_hook, &so_long);
+	mlx_key_hook(so_long.window, key_hook, NULL);
+	//mlx_hook(so_long.window, 17, 1L << 0, key_hook, NULL);
+	//mlx_hook(so_long.window, 17, 1L << 0, close_hook, &so_long);
+	//mlx_hook(so_long.window, 2, 0, keydown_hook, &so_long);
+	//mlx_key_hook(so_long.window, keyup_hook, &so_long);
 	if (so_long.bonus == 1)
 		mlx_loop_hook(so_long.mlx, game_loop_bonus, &so_long);
 	else

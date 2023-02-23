@@ -6,7 +6,7 @@
 #    By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 12:33:02 by f██████           #+#    #+#              #
-#    Updated: 2023/02/21 01:07:54 by f██████          ###   ########lyon.fr    #
+#    Updated: 2023/02/23 07:01:01 by f██████          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ ifeq ($(OS),Darwin)
 else
   GFLAGS = -lXext -lX11 -lm -lbsd
   GPATH = ./mlx-linux/
-  MLX_PATH = $(GPATH)/libmlx_Linux.a
+  MLX_PATH = $(GPATH)/libmlx.a
 endif
 
 
@@ -82,10 +82,10 @@ $(NAME) : $(MF) $(OBJS_BONUSOFF) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH)
 	@$(CC) $(CFLAGS) $(OBJS_BONUSOFF) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH) $(GFLAGS) -o $(NAME) 
 	@echo "\n${GREEN}> Compilation of so_long is success 🎉${END}"
 
-bonus: _libft _minilibx_mms $(NAME_BONUS)
+bonus: _libft _mlx $(NAME_BONUS)
 
 $(NAME_BONUS) : $(MF) $(OBJS_BONUSON) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH)
-	@$(CC) $(CFLAGS) $(OBJS_BONUSON) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH) -framework OpenGL -framework Appkit $(LIB_FLAGS) -o $(NAME_BONUS) 
+	@$(CC) $(CFLAGS) $(OBJS_BONUSON) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH) $(GFLAGS) -o $(NAME_BONUS) 
 	@echo "\n${GREEN}> Compilation of so_long is success 🎉${END}"
 
 ./.utests/%.o : ./.utests/%.c $(UTEST_HEADER_FILE) $(MF)
@@ -120,7 +120,6 @@ _test :
 
 _mlx :
 	make -C $(GPATH)
-	@cp $(MLX_PATH) .
 
 test: _libft _mlx _test $(UTEST_NAME)
 
