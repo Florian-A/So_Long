@@ -51,9 +51,15 @@ static int	game_loop_mandatory(t_so_long *so_long)
 	return (1);
 }
 
-int	key_hook(int keycode)
+int	key_hook1(int keycode)
 {
-	ft_printf("test %d\n", keycode);
+	ft_printf("test1 %d\n", keycode);
+	return (0);
+}
+
+int	key_hook2(int keycode)
+{
+	ft_printf("test2 %d\n", keycode);
 	return (0);
 }
 
@@ -63,13 +69,13 @@ void hook_register(t_so_long *so_long)
 	if (ft_strcmp(OS, "linux") == 0)
 	{
 		ft_printf("test1\n");
-		mlx_hook(so_long->window, 2, 0, key_hook, &so_long);
+		mlx_hook(so_long->window, 2, 1L<<0, key_hook1, &so_long);
+		mlx_hook(so_long->window, 3, 1L<<0, key_hook2, &so_long);
 		//mlx_key_hook(so_long->window, key_hook, &so_long);
 	}
 	else if (ft_strcmp(OS, "mac") == 0)
 	{
-		ft_printf("test1\n");
-		mlx_hook(so_long->window, 17, 1L << 0, key_hook, NULL);
+		ft_printf("test2\n");
 		mlx_hook(so_long->window, 17, 1L << 0, close_hook, &so_long);
 		mlx_hook(so_long->window, 2, 0, keydown_hook, &so_long);
 		mlx_key_hook(so_long->window, keyup_hook, &so_long);
