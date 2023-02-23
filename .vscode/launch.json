@@ -1,0 +1,19 @@
+{
+    "version": "1.0.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "so_long",
+            "program": "${workspaceFolder}/so_long",
+            "args": [
+                "./maps/1.ber"
+            ],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "build",
+            "env": {
+                "PATH": "${env:PATH}"
+            },
+        }
+    ]
+}

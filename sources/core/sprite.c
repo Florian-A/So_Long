@@ -6,7 +6,7 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 12:27:36 by f██████           #+#    #+#             */
-/*   Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/02/23 07:01:06 by f██████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static char	*path_sprite(char *sprite_name, int nb)
 	free(str1);
 	str1 = ft_strjoin(str2, nbr);
 	free(str2);
-	str2 = ft_strjoin(str1, ".png");
+	str2 = ft_strjoin(str1, ".xpm");
 	free(str1);
 	free(nbr);
 	return (str2);
@@ -41,15 +41,15 @@ t_so_long *so_long)
 
 	d = BPX;
 	if (sprite_type == 1)
-		so_long->ps[i - 1] = mlx_png_file_to_image(so_long->mlx, p, &d, &d);
+		so_long->ps[i - 1] = mlx_xpm_file_to_image(so_long->mlx, p, &d, &d);
 	else if (sprite_type == 2)
-		so_long->ms[i - 1] = mlx_png_file_to_image(so_long->mlx, p, &d, &d);
+		so_long->ms[i - 1] = mlx_xpm_file_to_image(so_long->mlx, p, &d, &d);
 	else if (sprite_type == 3)
-		so_long->gs[i - 1] = mlx_png_file_to_image(so_long->mlx, p, &d, &d);
+		so_long->gs[i - 1] = mlx_xpm_file_to_image(so_long->mlx, p, &d, &d);
 	else if (sprite_type == 4)
-		so_long->cs[i - 1] = mlx_png_file_to_image(so_long->mlx, p, &d, &d);
+		so_long->cs[i - 1] = mlx_xpm_file_to_image(so_long->mlx, p, &d, &d);
 	else if (sprite_type == 5)
-		so_long->os[i - 1] = mlx_png_file_to_image(so_long->mlx, p, &d, &d);
+		so_long->os[i - 1] = mlx_xpm_file_to_image(so_long->mlx, p, &d, &d);
 }
 
 static void	load_sprite(char *sprite_name, int nb_sprite, int sprite_type, \
