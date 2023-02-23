@@ -21,8 +21,10 @@
 
 # ifdef __linux__
 #   include "../mlx-linux/mlx.h"
+#   define OS "linux"
 #  elif __APPLE__
 #   include "../mlx-mms/mlx.h"
+#   define OS "macos"
 # endif
 
 # define WINDOW_TITLE "so_long"
