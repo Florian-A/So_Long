@@ -15,17 +15,17 @@
 // get action code
 int	get_action_keycode(int keycode)
 {
-	if (keycode == 123 || keycode == 0)
+	if (keycode == 123 || keycode == 0 || keycode == 97)
 		return (1);
-	else if (keycode == 124 || keycode == 2)
+	else if (keycode == 124 || keycode == 2 || keycode == 100)
 		return (2);
-	else if (keycode == 126 || keycode == 13)
+	else if (keycode == 126 || keycode == 13 || keycode == 119)
 		return (10);
-	else if (keycode == 125 || keycode == 1)
+	else if (keycode == 125 || keycode == 1 || keycode == 115)
 		return (4);
-	else if (keycode == 14 || keycode == 82)
+	else if (keycode == 14 || keycode == 82 || keycode == 101)
 		return (5);
-	else if (keycode == 49)
+	else if (keycode == 49 || keycode == 32)
 		return (10);
 	return (0);
 }
@@ -35,15 +35,16 @@ void	set_action(int keycode, t_so_long *so_long)
 {
 	t_player	*p;
 
+	ft_printf("keycode: %d", keycode);
 	p = so_long->player;
 	if (get_action_keycode(keycode) != 5)
 	{
 		if (p->ac[0] == 0
 			|| p->ac[0] == get_action_keycode(keycode))
-			p->ac[0] = get_action_keycode(keycode);
+				p->ac[0] = get_action_keycode(keycode);
 		else if (p->ac[1] == 0 || \
 			p->ac[1] == get_action_keycode(keycode))
-			p->ac[1] = get_action_keycode(keycode);
+				p->ac[1] = get_action_keycode(keycode);
 	}
 	else
 		p->ac[2] = get_action_keycode(keycode);
