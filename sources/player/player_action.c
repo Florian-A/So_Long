@@ -35,16 +35,15 @@ void	set_action(int keycode, t_so_long *so_long)
 {
 	t_player	*p;
 
-	ft_printf("keycode: %d", keycode);
 	p = so_long->player;
 	if (get_action_keycode(keycode) != 5)
 	{
 		if (p->ac[0] == 0
 			|| p->ac[0] == get_action_keycode(keycode))
-				p->ac[0] = get_action_keycode(keycode);
+			p->ac[0] = get_action_keycode(keycode);
 		else if (p->ac[1] == 0 || \
 			p->ac[1] == get_action_keycode(keycode))
-				p->ac[1] = get_action_keycode(keycode);
+			p->ac[1] = get_action_keycode(keycode);
 	}
 	else
 		p->ac[2] = get_action_keycode(keycode);

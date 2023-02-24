@@ -24,7 +24,6 @@ void	init_s_so_long(char *argv[], t_so_long *so_long)
 		so_long->dbg = 1;
 	else
 		so_long->dbg = 0;
-		
 	so_long->player = ft_calloc(sizeof(t_player), 1);
 	if (!so_long->player)
 		exit(EXIT_FAILURE);
