@@ -18,15 +18,11 @@ void	player_count_movement(t_so_long *so_long)
 	if (so_long->player->lpp[0] != so_long->player->pp[0])
 	{
 		so_long->nm++;
-		if (so_long->bonus == 0)
-			ft_printf("Movement : %d \n", so_long->nm);
 		return ;
 	}
 	if (so_long->player->lpp[1] != so_long->player->pp[1])
 	{
 		so_long->nm++;
-		if (so_long->bonus == 0)
-			ft_printf("Movement : %d \n", so_long->nm);
 		return ;
 	}
 }
