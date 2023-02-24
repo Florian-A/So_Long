@@ -141,7 +141,6 @@ player : player struct
 monster : monster struct
 */
 typedef struct s_so_long {
-	int			bonus;
 	void		*mlx;
 	void		*window;
 	int			gw;
@@ -173,7 +172,6 @@ int			init_player(t_so_long *so_long);
 void		init_camera(t_so_long *so_long);
 
 // tools and debug
-int			is_bonus(void);
 long long	millitimestamp(void);
 void		fps(t_so_long *so_long);
 void		show_fps(t_so_long *so_long);

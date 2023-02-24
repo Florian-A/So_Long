@@ -15,7 +15,6 @@
 // Initialization of the t_so_long structure
 void	init_s_so_long(char *argv[], t_so_long *so_long)
 {
-	so_long->bonus = is_bonus();
 	so_long->mlx = mlx_init();
 	so_long->lm = 0;
 	so_long->gw = -1;
