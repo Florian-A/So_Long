@@ -21,8 +21,10 @@
 
 # ifdef __linux__
 #   include "../mlx-linux/mlx.h"
+#   define OS "linux"
 #  elif __APPLE__
 #   include "../mlx-mms/mlx.h"
+#   define OS "macos"
 # endif
 
 # define WINDOW_TITLE "so_long"
@@ -189,6 +191,7 @@ void		sl_error(int error_n, t_so_long *so_long);
 void		draw_block(int x, int y, void *sprite, t_so_long *so_long);
 
 // actions & hooks
+void		hook_register(t_so_long *so_long);
 void		set_action(int keycode, t_so_long *so_long);
 void		unset_action(int keycode, t_so_long *so_long);
 int			keydown_hook(int keycode, t_so_long *so_long);
