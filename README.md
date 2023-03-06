@@ -34,12 +34,6 @@ Exemple :
 ./so_long ./maps/map.ber DEBUG=0
 ```
 
-Ou
-
-```
-./so_long ./maps/map.ber DEBUG=0
-```
-
 Les tests unitaires s'executent de la façon suivante :
 
 ```
