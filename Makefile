@@ -6,7 +6,7 @@
 #    By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 12:33:02 by f██████           #+#    #+#              #
-#    Updated: 2023/02/23 07:01:01 by f██████          ###   ########lyon.fr    #
+#    Updated: 2023/03/06 09:50:58 by f██████          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,11 +40,6 @@ SRC_UTEST = $(addprefix ./.utests/, \
 main.c \
 )
 
-OBJS_BONUSOFF = $(SRCS_BONUSOFF:.c=.o)
-OBJS_BONUSON = $(SRCS_BONUSON:.c=.o)
-SRCS_BONUSOFF = $(addprefix $(SRC_DIR)/, core/bonus_off.c)
-SRCS_BONUSON = $(addprefix $(SRC_DIR)/, core/bonus_on.c)
-
 SRC_DIR	= ./sources
 INC_DIR	= ./includes/
 CC = gcc
@@ -57,7 +52,6 @@ CFLAGS = -Wall -Wextra -Werror
 endif
 
 NAME = so_long
-NAME_BONUS = so_long-bonus
 LIBFT_PATH = ./libft/libft.a
 LIBTEST_PATH = ./libft/libtest.a
 SL_HEADER_FILE = $(INC_DIR)/so_long.h
@@ -78,14 +72,8 @@ endif
 
 all : _libft _mlx $(NAME)
 
-$(NAME) : $(MF) $(OBJS_BONUSOFF) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH)
-	@$(CC) $(CFLAGS) $(OBJS_BONUSOFF) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH) $(GFLAGS) -o $(NAME) 
-	@echo "\n${GREEN}> Compilation of so_long is success 🎉${END}"
-
-bonus: _libft _mlx $(NAME_BONUS)
-
-$(NAME_BONUS) : $(MF) $(OBJS_BONUSON) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH)
-	@$(CC) $(CFLAGS) $(OBJS_BONUSON) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH) $(GFLAGS) -o $(NAME_BONUS) 
+$(NAME) : $(MF) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH)
+	@$(CC) $(CFLAGS) $(OBJS_SL) $(LIBFT_PATH) $(MLX_PATH) $(GFLAGS) -o $(NAME) 
 	@echo "\n${GREEN}> Compilation of so_long is success 🎉${END}"
 
 ./.utests/%.o : ./.utests/%.c $(UTEST_HEADER_FILE) $(MF)
@@ -127,4 +115,4 @@ $(UTEST_NAME) : $(MF) $(OBJS_UTEST) $(LIBTEST_PATH) $(LIBFT_PATH)
 	@$(CC) $(CFLAGS) $(OBJS_UTEST) $(LIBTEST_PATH) $(LIBFT_PATH) $(MLX_PATH) -o $(UTEST_NAME)
 	@echo "\n${GREEN}> Compilation of unit tests is success 🎉${END}"
 
-.PHONY:	all bonus clean fclean re lib
+.PHONY:	all clean fclean re lib

@@ -6,7 +6,7 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 11:45:53 by f██████           #+#    #+#             */
-/*   Updated: 2023/02/23 07:01:06 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/03/06 09:50:58 by f██████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,7 +139,6 @@ player : player struct
 monster : monster struct
 */
 typedef struct s_so_long {
-	int			bonus;
 	void		*mlx;
 	void		*window;
 	int			gw;
@@ -171,7 +170,6 @@ int			init_player(t_so_long *so_long);
 void		init_camera(t_so_long *so_long);
 
 // tools and debug
-int			is_bonus(void);
 long long	millitimestamp(void);
 void		fps(t_so_long *so_long);
 void		show_fps(t_so_long *so_long);
