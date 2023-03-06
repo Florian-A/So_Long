@@ -1,0 +1,710 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Metal",
+      "printedName": "Metal",
+      "declKind": "Import",
+      "moduleName": "mlx_image"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "MlxImg",
+      "printedName": "MlxImg",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "texture",
+          "printedName": "texture",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MTLTexture",
+              "printedName": "Metal.MTLTexture",
+              "usr": "c:objc(pl)MTLTexture"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:9mlx_image6MlxImgC7textureSo10MTLTexture_pvp",
+          "mangledName": "$s9mlx_image6MlxImgC7textureSo10MTLTexture_pvp",
+          "moduleName": "mlx_image",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "MTLTexture",
+                  "printedName": "Metal.MTLTexture",
+                  "usr": "c:objc(pl)MTLTexture"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC7textureSo10MTLTexture_pvg",
+              "mangledName": "$s9mlx_image6MlxImgC7textureSo10MTLTexture_pvg",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "MTLTexture",
+                  "printedName": "Metal.MTLTexture",
+                  "usr": "c:objc(pl)MTLTexture"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC7textureSo10MTLTexture_pvs",
+              "mangledName": "$s9mlx_image6MlxImgC7textureSo10MTLTexture_pvs",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC7textureSo10MTLTexture_pvM",
+              "mangledName": "$s9mlx_image6MlxImgC7textureSo10MTLTexture_pvM",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "texture_sizeline",
+          "printedName": "texture_sizeline",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:9mlx_image6MlxImgC16texture_sizelineSivp",
+          "mangledName": "$s9mlx_image6MlxImgC16texture_sizelineSivp",
+          "moduleName": "mlx_image",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC16texture_sizelineSivg",
+              "mangledName": "$s9mlx_image6MlxImgC16texture_sizelineSivg",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC16texture_sizelineSivs",
+              "mangledName": "$s9mlx_image6MlxImgC16texture_sizelineSivs",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC16texture_sizelineSivM",
+              "mangledName": "$s9mlx_image6MlxImgC16texture_sizelineSivM",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "texture_data",
+          "printedName": "texture_data",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UnsafeMutablePointer",
+              "printedName": "Swift.UnsafeMutablePointer<Swift.UInt32>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UInt32",
+                  "printedName": "Swift.UInt32",
+                  "usr": "s:s6UInt32V"
+                }
+              ],
+              "usr": "s:Sp"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:9mlx_image6MlxImgC12texture_dataSpys6UInt32VGvp",
+          "mangledName": "$s9mlx_image6MlxImgC12texture_dataSpys6UInt32VGvp",
+          "moduleName": "mlx_image",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UnsafeMutablePointer",
+                  "printedName": "Swift.UnsafeMutablePointer<Swift.UInt32>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "UInt32",
+                      "printedName": "Swift.UInt32",
+                      "usr": "s:s6UInt32V"
+                    }
+                  ],
+                  "usr": "s:Sp"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC12texture_dataSpys6UInt32VGvg",
+              "mangledName": "$s9mlx_image6MlxImgC12texture_dataSpys6UInt32VGvg",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "UnsafeMutablePointer",
+                  "printedName": "Swift.UnsafeMutablePointer<Swift.UInt32>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "UInt32",
+                      "printedName": "Swift.UInt32",
+                      "usr": "s:s6UInt32V"
+                    }
+                  ],
+                  "usr": "s:Sp"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC12texture_dataSpys6UInt32VGvs",
+              "mangledName": "$s9mlx_image6MlxImgC12texture_dataSpys6UInt32VGvs",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC12texture_dataSpys6UInt32VGvM",
+              "mangledName": "$s9mlx_image6MlxImgC12texture_dataSpys6UInt32VGvM",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "texture_width",
+          "printedName": "texture_width",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:9mlx_image6MlxImgC13texture_widthSivp",
+          "mangledName": "$s9mlx_image6MlxImgC13texture_widthSivp",
+          "moduleName": "mlx_image",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 3,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC13texture_widthSivg",
+              "mangledName": "$s9mlx_image6MlxImgC13texture_widthSivg",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC13texture_widthSivs",
+              "mangledName": "$s9mlx_image6MlxImgC13texture_widthSivs",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC13texture_widthSivM",
+              "mangledName": "$s9mlx_image6MlxImgC13texture_widthSivM",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "texture_height",
+          "printedName": "texture_height",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:9mlx_image6MlxImgC14texture_heightSivp",
+          "mangledName": "$s9mlx_image6MlxImgC14texture_heightSivp",
+          "moduleName": "mlx_image",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 4,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC14texture_heightSivg",
+              "mangledName": "$s9mlx_image6MlxImgC14texture_heightSivg",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC14texture_heightSivs",
+              "mangledName": "$s9mlx_image6MlxImgC14texture_heightSivs",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC14texture_heightSivM",
+              "mangledName": "$s9mlx_image6MlxImgC14texture_heightSivM",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "onGPU",
+          "printedName": "onGPU",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:9mlx_image6MlxImgC5onGPUSivp",
+          "mangledName": "$s9mlx_image6MlxImgC5onGPUSivp",
+          "moduleName": "mlx_image",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 5,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC5onGPUSivg",
+              "mangledName": "$s9mlx_image6MlxImgC5onGPUSivg",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC5onGPUSivs",
+              "mangledName": "$s9mlx_image6MlxImgC5onGPUSivs",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:9mlx_image6MlxImgC5onGPUSivM",
+              "mangledName": "$s9mlx_image6MlxImgC5onGPUSivM",
+              "moduleName": "mlx_image",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(d:w:h:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MlxImg",
+              "printedName": "mlx_image.MlxImg",
+              "usr": "s:9mlx_image6MlxImgC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "MTLDevice",
+              "printedName": "Metal.MTLDevice",
+              "usr": "c:objc(pl)MTLDevice"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:9mlx_image6MlxImgC1d1w1hACSo9MTLDevice_p_S2itcfc",
+          "mangledName": "$s9mlx_image6MlxImgC1d1w1hACSo9MTLDevice_p_S2itcfc",
+          "moduleName": "mlx_image",
+          "declAttributes": [
+            "AccessControl",
+            "Convenience"
+          ],
+          "init_kind": "Convenience"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(d:w:h:t:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MlxImg",
+              "printedName": "mlx_image.MlxImg",
+              "usr": "s:9mlx_image6MlxImgC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "MTLDevice",
+              "printedName": "Metal.MTLDevice",
+              "usr": "c:objc(pl)MTLDevice"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:9mlx_image6MlxImgC1d1w1h1tACSo9MTLDevice_p_S3itcfc",
+          "mangledName": "$s9mlx_image6MlxImgC1d1w1h1tACSo9MTLDevice_p_S3itcfc",
+          "moduleName": "mlx_image",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:9mlx_image6MlxImgC",
+      "mangledName": "$s9mlx_image6MlxImgC",
+      "moduleName": "mlx_image",
+      "declAttributes": [
+        "AccessControl"
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

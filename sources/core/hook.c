@@ -6,7 +6,7 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 11:45:53 by f██████           #+#    #+#             */
-/*   Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/03/06 14:15:02 by f██████          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	hook_register(t_so_long *so_long)
 		mlx_hook(so_long->window, 2, 1L << 0, keydown_hook, so_long);
 		mlx_hook(so_long->window, 3, 1L << 1, keyup_hook, so_long);
 	}
-	else if (ft_strcmp(OS, "mac") == 0)
+	else if (ft_strcmp(OS, "macos") == 0)
 	{
 		mlx_hook(so_long->window, 17, 1L << 0, close_hook, so_long);
 		mlx_hook(so_long->window, 2, 0, keydown_hook, so_long);

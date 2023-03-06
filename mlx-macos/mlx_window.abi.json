@@ -1,0 +1,959 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Cocoa",
+      "printedName": "Cocoa",
+      "declKind": "Import",
+      "moduleName": "mlx_window"
+    },
+    {
+      "kind": "Import",
+      "name": "Metal",
+      "printedName": "Metal",
+      "declKind": "Import",
+      "moduleName": "mlx_window"
+    },
+    {
+      "kind": "Import",
+      "name": "MetalKit",
+      "printedName": "MetalKit",
+      "declKind": "Import",
+      "moduleName": "mlx_window"
+    },
+    {
+      "kind": "Import",
+      "name": "Darwin",
+      "printedName": "Darwin",
+      "declKind": "Import",
+      "moduleName": "mlx_window"
+    },
+    {
+      "kind": "Import",
+      "name": "mlx_image",
+      "printedName": "mlx_image",
+      "declKind": "Import",
+      "moduleName": "mlx_window"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "MlxWin",
+      "printedName": "MlxWin",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "vrect",
+          "printedName": "vrect",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CGRect",
+              "printedName": "CoreGraphics.CGRect",
+              "usr": "c:@S@CGRect"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC5vrectSo6CGRectVvp",
+          "mangledName": "$s10mlx_window6MlxWinC5vrectSo6CGRectVvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "winE",
+          "printedName": "winE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "WinEvent",
+              "printedName": "mlx_window.WinEvent",
+              "usr": "c:@M@mlx_window@objc(cs)WinEvent"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC4winEAA0D5EventCvp",
+          "mangledName": "$s10mlx_window6MlxWinC4winEAA0D5EventCvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "mlayer",
+          "printedName": "mlayer",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CAMetalLayer",
+              "printedName": "QuartzCore.CAMetalLayer",
+              "usr": "c:objc(cs)CAMetalLayer"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC6mlayerSo12CAMetalLayerCvp",
+          "mangledName": "$s10mlx_window6MlxWinC6mlayerSo12CAMetalLayerCvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "device",
+          "printedName": "device",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UnownedStorage",
+              "printedName": "Metal.MTLDevice"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC6deviceSo9MTLDevice_pvp",
+          "mangledName": "$s10mlx_window6MlxWinC6deviceSo9MTLDevice_pvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage",
+            "ReferenceOwnership"
+          ],
+          "fixedbinaryorder": 3,
+          "ownership": 2,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "commandQueue",
+          "printedName": "commandQueue",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ImplicitlyUnwrappedOptional",
+              "printedName": "Metal.MTLCommandQueue?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "MTLCommandQueue",
+                  "printedName": "Metal.MTLCommandQueue",
+                  "usr": "c:objc(pl)MTLCommandQueue"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC12commandQueueSo010MTLCommandF0_pSgvp",
+          "mangledName": "$s10mlx_window6MlxWinC12commandQueueSo010MTLCommandF0_pSgvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 4,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "pipelineState",
+          "printedName": "pipelineState",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ImplicitlyUnwrappedOptional",
+              "printedName": "Metal.MTLRenderPipelineState?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "MTLRenderPipelineState",
+                  "printedName": "Metal.MTLRenderPipelineState",
+                  "usr": "c:objc(pl)MTLRenderPipelineState"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC13pipelineStateSo017MTLRenderPipelineF0_pSgvp",
+          "mangledName": "$s10mlx_window6MlxWinC13pipelineStateSo017MTLRenderPipelineF0_pSgvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 5,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "vertexBuffer",
+          "printedName": "vertexBuffer",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ImplicitlyUnwrappedOptional",
+              "printedName": "Metal.MTLBuffer?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "MTLBuffer",
+                  "printedName": "Metal.MTLBuffer",
+                  "usr": "c:objc(pl)MTLBuffer"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC12vertexBufferSo9MTLBuffer_pSgvp",
+          "mangledName": "$s10mlx_window6MlxWinC12vertexBufferSo9MTLBuffer_pSgvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 6,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "texture_list",
+          "printedName": "texture_list",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[mlx_window.textureList]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "textureList",
+                  "printedName": "mlx_window.textureList",
+                  "usr": "s:10mlx_window11textureListV"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC12texture_listSayAA0E4ListVGvp",
+          "mangledName": "$s10mlx_window6MlxWinC12texture_listSayAA0E4ListVGvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 7,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "texture_list_count",
+          "printedName": "texture_list_count",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC18texture_list_countSivp",
+          "mangledName": "$s10mlx_window6MlxWinC18texture_list_countSivp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 8,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "pixel_image",
+          "printedName": "pixel_image",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MlxImg",
+              "printedName": "mlx_image.MlxImg",
+              "usr": "s:9mlx_image6MlxImgC"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC11pixel_image0a1_F00C3ImgCvp",
+          "mangledName": "$s10mlx_window6MlxWinC11pixel_image0a1_F00C3ImgCvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 9,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "pixel_count",
+          "printedName": "pixel_count",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC11pixel_countSivp",
+          "mangledName": "$s10mlx_window6MlxWinC11pixel_countSivp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 10,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "drawable_image",
+          "printedName": "drawable_image",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MlxImg",
+              "printedName": "mlx_image.MlxImg",
+              "usr": "s:9mlx_image6MlxImgC"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC14drawable_image0a1_F00C3ImgCvp",
+          "mangledName": "$s10mlx_window6MlxWinC14drawable_image0a1_F00C3ImgCvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 11,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "uniq_renderPassDescriptor",
+          "printedName": "uniq_renderPassDescriptor",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MTLRenderPassDescriptor",
+              "printedName": "Metal.MTLRenderPassDescriptor",
+              "usr": "c:objc(cs)MTLRenderPassDescriptor"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC25uniq_renderPassDescriptorSo09MTLRendergH0Cvp",
+          "mangledName": "$s10mlx_window6MlxWinC25uniq_renderPassDescriptorSo09MTLRendergH0Cvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 12,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "mtl_origin_null",
+          "printedName": "mtl_origin_null",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MTLOrigin",
+              "printedName": "Metal.MTLOrigin",
+              "usr": "c:@SA@MTLOrigin"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC15mtl_origin_nullSo9MTLOriginavp",
+          "mangledName": "$s10mlx_window6MlxWinC15mtl_origin_nullSo9MTLOriginavp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 13,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "mtl_size_all",
+          "printedName": "mtl_size_all",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MTLSize",
+              "printedName": "Metal.MTLSize",
+              "usr": "c:@SA@MTLSize"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC12mtl_size_allSo7MTLSizeavp",
+          "mangledName": "$s10mlx_window6MlxWinC12mtl_size_allSo7MTLSizeavp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 14,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "doClear",
+          "printedName": "doClear",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC7doClearSbvp",
+          "mangledName": "$s10mlx_window6MlxWinC7doClearSbvp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 15,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "GPUbatch",
+          "printedName": "GPUbatch",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:10mlx_window6MlxWinC8GPUbatchSivp",
+          "mangledName": "$s10mlx_window6MlxWinC8GPUbatchSivp",
+          "moduleName": "mlx_window",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 16,
+          "hasStorage": true
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(device:width:height:title:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MlxWin",
+              "printedName": "mlx_window.MlxWin",
+              "usr": "s:10mlx_window6MlxWinC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "MTLDevice",
+              "printedName": "Metal.MTLDevice",
+              "usr": "c:objc(pl)MTLDevice"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:10mlx_window6MlxWinC6device5width6height5titleACSo9MTLDevice_p_S2iSStcfc",
+          "mangledName": "$s10mlx_window6MlxWinC6device5width6height5titleACSo9MTLDevice_p_S2iSStcfc",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "getWinEFrame",
+          "printedName": "getWinEFrame()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CGRect",
+              "printedName": "CoreGraphics.CGRect",
+              "usr": "c:@S@CGRect"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC03getD6EFrameSo6CGRectVyF",
+          "mangledName": "$s10mlx_window6MlxWinC03getD6EFrameSo6CGRectVyF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getScreenFrame",
+          "printedName": "getScreenFrame()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CGRect",
+              "printedName": "CoreGraphics.CGRect",
+              "usr": "c:@S@CGRect"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC14getScreenFrameSo6CGRectVyF",
+          "mangledName": "$s10mlx_window6MlxWinC14getScreenFrameSo6CGRectVyF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getMouseLoc",
+          "printedName": "getMouseLoc()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CGPoint",
+              "printedName": "CoreGraphics.CGPoint",
+              "usr": "c:@S@CGPoint"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC11getMouseLocSo7CGPointVyF",
+          "mangledName": "$s10mlx_window6MlxWinC11getMouseLocSo7CGPointVyF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "addHook",
+          "printedName": "addHook(index:fct:param:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UnsafeMutableRawPointer",
+              "printedName": "Swift.UnsafeMutableRawPointer",
+              "usr": "s:Sv"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UnsafeMutableRawPointer",
+              "printedName": "Swift.UnsafeMutableRawPointer",
+              "usr": "s:Sv"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC7addHook5index3fct5paramySi_S2vtF",
+          "mangledName": "$s10mlx_window6MlxWinC7addHook5index3fct5paramySi_S2vtF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setKeyRepeat",
+          "printedName": "setKeyRepeat(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC12setKeyRepeatyySiF",
+          "mangledName": "$s10mlx_window6MlxWinC12setKeyRepeatyySiF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "destroyWinE",
+          "printedName": "destroyWinE()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC07destroyD1EyyF",
+          "mangledName": "$s10mlx_window6MlxWinC07destroyD1EyyF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setNotifs",
+          "printedName": "setNotifs()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC9setNotifsyyF",
+          "mangledName": "$s10mlx_window6MlxWinC9setNotifsyyF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "delNotifs",
+          "printedName": "delNotifs()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC9delNotifsyyF",
+          "mangledName": "$s10mlx_window6MlxWinC9delNotifsyyF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "initMetal",
+          "printedName": "initMetal()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC9initMetalyyF",
+          "mangledName": "$s10mlx_window6MlxWinC9initMetalyyF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "clearWin",
+          "printedName": "clearWin()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC05clearD0yyF",
+          "mangledName": "$s10mlx_window6MlxWinC05clearD0yyF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "flushImages",
+          "printedName": "flushImages()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC11flushImagesyyF",
+          "mangledName": "$s10mlx_window6MlxWinC11flushImagesyyF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "waitForGPU",
+          "printedName": "waitForGPU()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC10waitForGPUyyF",
+          "mangledName": "$s10mlx_window6MlxWinC10waitForGPUyyF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "pixelPut",
+          "printedName": "pixelPut(_:_:_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UInt32",
+              "printedName": "Swift.UInt32",
+              "usr": "s:s6UInt32V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC8pixelPutyys5Int32V_AFs6UInt32VtF",
+          "mangledName": "$s10mlx_window6MlxWinC8pixelPutyys5Int32V_AFs6UInt32VtF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "putImage",
+          "printedName": "putImage(image:x:y:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "MlxImg",
+              "printedName": "mlx_image.MlxImg",
+              "usr": "s:9mlx_image6MlxImgC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC8putImage5image1x1yy0a1_G00C3ImgC_s5Int32VALtF",
+          "mangledName": "$s10mlx_window6MlxWinC8putImage5image1x1yy0a1_G00C3ImgC_s5Int32VALtF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "putImageScale",
+          "printedName": "putImageScale(image:sx:sy:sw:sh:dx:dy:dw:dh:c:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "MlxImg",
+              "printedName": "mlx_image.MlxImg",
+              "usr": "s:9mlx_image6MlxImgC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UInt32",
+              "printedName": "Swift.UInt32",
+              "usr": "s:s6UInt32V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:10mlx_window6MlxWinC13putImageScale5image2sx2sy2sw2sh2dx2dy2dw2dh1cy0a1_H00C3ImgC_s5Int32VA7Ss6UInt32VtF",
+          "mangledName": "$s10mlx_window6MlxWinC13putImageScale5image2sx2sy2sw2sh2dx2dy2dw2dh1cy0a1_H00C3ImgC_s5Int32VA7Ss6UInt32VtF",
+          "moduleName": "mlx_window",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:10mlx_window6MlxWinC",
+      "mangledName": "$s10mlx_window6MlxWinC",
+      "moduleName": "mlx_window",
+      "declAttributes": [
+        "AccessControl"
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

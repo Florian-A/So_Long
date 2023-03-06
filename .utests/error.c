@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utest.h                                            :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 11:45:53 by f██████           #+#    #+#             */
+/*   Created: 2022/04/14 01:04:58 by ███████           #+#    #+#             */
 /*   Updated: 2023/03/06 14:15:02 by f██████          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTEST_H
-# define UTEST_H
+#include "../includes/utest.h"
 
-# include "../libft/includes/libtest.h"
-# include "./so_long.h"
+void	fatal_error(char *str)
+{
+	(void)str;
+	return ;
+}
 
-int	test_null(void);
-
-#endif
+void	msg_error(char *str)
+{
+	(void)str;
+	return ;
+}
