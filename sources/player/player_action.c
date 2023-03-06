@@ -6,7 +6,7 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 12:27:36 by f██████           #+#    #+#             */
-/*   Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/03/06 11:20:40 by f██████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,19 @@
 // get action code
 int	get_action_keycode(int keycode)
 {
-	if (keycode == 123 || keycode == 0 || keycode == 97)
+	ft_printf("keycode : %d", keycode);
+	if (keycode == LETTER_KEY_LEFT || keycode == ARROW_KEY_LEFT)
 		return (1);
-	else if (keycode == 124 || keycode == 2 || keycode == 100)
+	else if (keycode == LETTER_KEY_RIGHT || keycode == ARROW_KEY_RIGHT)
 		return (2);
-	else if (keycode == 126 || keycode == 13 || keycode == 119)
+	else if (keycode == LETTER_KEY_UP || \
+	keycode == ARROW_KEY_UP || keycode == SPACE_BAR)
 		return (10);
-	else if (keycode == 125 || keycode == 1 || keycode == 115)
+	else if (keycode == LETTER_KEY_DOWN || \
+	keycode == ARROW_KEY_DOWN)
 		return (4);
-	else if (keycode == 14 || keycode == 82 || keycode == 101)
+	else if (keycode == LETTER_KEY_ACTION)
 		return (5);
-	else if (keycode == 49 || keycode == 32)
-		return (10);
 	return (0);
 }
 
