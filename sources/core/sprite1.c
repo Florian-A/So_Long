@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sprite.c                                           :+:      :+:    :+:   */
+/*   sprite1.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 12:27:36 by f██████           #+#    #+#             */
-/*   Updated: 2023/02/23 07:01:06 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/03/06 14:15:02 by f██████          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ static char	*path_sprite(char *sprite_name, int nb)
 	free(str1);
 	str1 = ft_strjoin(str2, nbr);
 	free(str2);
-	str2 = ft_strjoin(str1, ".xpm");
+	if (ft_strcmp(OS, "macos") == 0)
+		str2 = ft_strjoin(str1, ".png");
+	else
+		str2 = ft_strjoin(str1, ".xpm");
 	free(str1);
 	free(nbr);
 	return (str2);
@@ -37,19 +40,10 @@ static char	*path_sprite(char *sprite_name, int nb)
 static void	load_sprite_type(int i, char *p, int sprite_type,
 t_so_long *so_long)
 {
-	int		d;
-
-	d = BPX;
-	if (sprite_type == 1)
-		so_long->ps[i - 1] = mlx_xpm_file_to_image(so_long->mlx, p, &d, &d);
-	else if (sprite_type == 2)
-		so_long->ms[i - 1] = mlx_xpm_file_to_image(so_long->mlx, p, &d, &d);
-	else if (sprite_type == 3)
-		so_long->gs[i - 1] = mlx_xpm_file_to_image(so_long->mlx, p, &d, &d);
-	else if (sprite_type == 4)
-		so_long->cs[i - 1] = mlx_xpm_file_to_image(so_long->mlx, p, &d, &d);
-	else if (sprite_type == 5)
-		so_long->os[i - 1] = mlx_xpm_file_to_image(so_long->mlx, p, &d, &d);
+	if (ft_strcmp(OS, "macos") == 0)
+		load_sprite_type_png(i, p, sprite_type, so_long);
+	else
+		load_sprite_type_xpm(i, p, sprite_type, so_long);
 }
 
 static void	load_sprite(char *sprite_name, int nb_sprite, int sprite_type, \

@@ -6,7 +6,7 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 12:27:36 by f██████           #+#    #+#             */
-/*   Updated: 2023/03/06 11:20:40 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/03/06 14:15:02 by f██████          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 // get action code
 int	get_action_keycode(int keycode)
 {
-	ft_printf("keycode : %d", keycode);
 	if (keycode == LETTER_KEY_LEFT || keycode == ARROW_KEY_LEFT)
 		return (1);
 	else if (keycode == LETTER_KEY_RIGHT || keycode == ARROW_KEY_RIGHT)

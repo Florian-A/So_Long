@@ -6,7 +6,7 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 11:45:53 by f██████           #+#    #+#             */
-/*   Updated: 2023/03/06 11:27:27 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/03/06 14:15:02 by f██████          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,6 @@
 # include <stdlib.h>
 
 # include "../libft/includes/libft.h"
-
-# ifdef __linux__
-#   include "../mlx-linux/mlx.h"
-#   define OS "linux"
-#  elif __APPLE__
-#   include "../mlx-mms/mlx.h"
-#   define OS "macos"
-# endif
 
 # ifdef __linux__
 #  include "../mlx-linux/mlx.h"
@@ -42,18 +34,18 @@
 #  define SPACE_BAR				32
 #  define KEY_ESC				65307
 # elif __APPLE__
-#  include "../mlx-mms/mlx.h"
+#  include "../mlx-macos/mlx.h"
 #  define OS "macos"
 #  define LETTER_KEY_LEFT       0
 #  define LETTER_KEY_RIGHT      2
 #  define LETTER_KEY_UP 		13
 #  define LETTER_KEY_DOWN		1
-#  define LETTER_KEY_ACTION		0
+#  define LETTER_KEY_ACTION		14
 #  define ARROW_KEY_LEFT		123
 #  define ARROW_KEY_RIGHT		124
 #  define ARROW_KEY_UP			126
 #  define ARROW_KEY_DOWN		125
-#  define SPACE_BAR				0
+#  define SPACE_BAR				49
 #  define KEY_ESC				53
 # endif
 
@@ -219,6 +211,10 @@ void		show_debug_map(t_so_long *so_long);
 void		show_debug_map2(t_so_long *so_long);
 void		sl_error(int error_n, t_so_long *so_long);
 void		draw_block(int x, int y, void *sprite, t_so_long *so_long);
+void		load_sprite_type_png(int i, char *p, int sprite_type, \
+t_so_long *so_long);
+void		load_sprite_type_xpm(int i, char *p, int sprite_type, \
+t_so_long *so_long);
 
 // actions & hooks
 void		hook_register(t_so_long *so_long);

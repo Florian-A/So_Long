@@ -6,7 +6,7 @@
 #    By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 12:33:02 by f██████           #+#    #+#              #
-#    Updated: 2023/03/06 10:33:26 by f██████          ###   ########lyon.fr    #
+#    Updated: 2023/03/06 14:15:02 by f██████          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ WHITE=$'\x1b[37m
 
 OBJS_SL = $(SRCS_SL:.c=.o)
 SRCS_SL = $(addprefix $(SRC_DIR)/, \
-core/main.c core/init.c core/draw.c core/error.c core/hook.c core/sprite.c \
+core/main.c core/init.c core/draw.c core/error.c core/hook.c core/sprite1.c core/sprite2.c \
 parsing/parsing1.c parsing/parsing2.c \
 tools/debug.c tools/fps.c tools/hud.c \
 player/player.c player/player_position.c player/player_action.c player/player_distance.c player/player_mouvement.c \
@@ -37,7 +37,8 @@ other/wall.c other/background.c other/item.c other/gate.c \
 
 OBJS_UTEST = $(SRC_UTEST:.c=.o)
 SRC_UTEST = $(addprefix ./.utests/, \
-main.c \
+main.c error.c \
+test_null.c \
 )
 
 SRC_DIR	= ./sources
@@ -51,6 +52,7 @@ else
 CFLAGS = -Wall -Wextra -Werror
 endif
 
+UNAME = $(shell uname -s)
 NAME = so_long
 LIBFT_PATH = ./libft/libft.a
 LIBTEST_PATH = ./libft/libtest.a
@@ -59,9 +61,9 @@ UTEST_NAME = utest
 UTEST_HEADER_FILE = $(INC_DIR)/utest.h
 
 
-ifeq ($(OS),Darwin)
+ifeq ($(UNAME),Darwin)
   GFLAGS = -framework OpenGL -framework Appkit -l z
-  GPATH = ./mlx-mms/
+  GPATH = ./mlx-macos/
   MLX_PATH = $(GPATH)/libmlx.dylib
 else
   GFLAGS = -lXext -lX11 -lm -lbsd

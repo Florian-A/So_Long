@@ -1,0 +1,745 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Cocoa",
+      "printedName": "Cocoa",
+      "declKind": "Import",
+      "moduleName": "mlx_init"
+    },
+    {
+      "kind": "Import",
+      "name": "Metal",
+      "printedName": "Metal",
+      "declKind": "Import",
+      "moduleName": "mlx_init"
+    },
+    {
+      "kind": "Import",
+      "name": "mlx_window",
+      "printedName": "mlx_window",
+      "declKind": "Import",
+      "moduleName": "mlx_init"
+    },
+    {
+      "kind": "Import",
+      "name": "mlx_image",
+      "printedName": "mlx_image",
+      "declKind": "Import",
+      "moduleName": "mlx_init"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "MlxMain",
+      "printedName": "MlxMain",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "winList",
+          "printedName": "winList",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[mlx_window.MlxWin]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "MlxWin",
+                  "printedName": "mlx_window.MlxWin",
+                  "usr": "s:10mlx_window6MlxWinC"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8mlx_init7MlxMainC7winListSay0A7_window0C3WinCGvp",
+          "mangledName": "$s8mlx_init7MlxMainC7winListSay0A7_window0C3WinCGvp",
+          "moduleName": "mlx_init",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[mlx_window.MlxWin]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "MlxWin",
+                      "printedName": "mlx_window.MlxWin",
+                      "usr": "s:10mlx_window6MlxWinC"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC7winListSay0A7_window0C3WinCGvg",
+              "mangledName": "$s8mlx_init7MlxMainC7winListSay0A7_window0C3WinCGvg",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[mlx_window.MlxWin]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "MlxWin",
+                      "printedName": "mlx_window.MlxWin",
+                      "usr": "s:10mlx_window6MlxWinC"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC7winListSay0A7_window0C3WinCGvs",
+              "mangledName": "$s8mlx_init7MlxMainC7winListSay0A7_window0C3WinCGvs",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC7winListSay0A7_window0C3WinCGvM",
+              "mangledName": "$s8mlx_init7MlxMainC7winListSay0A7_window0C3WinCGvM",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "imgList",
+          "printedName": "imgList",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[mlx_image.MlxImg]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "MlxImg",
+                  "printedName": "mlx_image.MlxImg",
+                  "usr": "s:9mlx_image6MlxImgC"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8mlx_init7MlxMainC7imgListSay0A6_image0C3ImgCGvp",
+          "mangledName": "$s8mlx_init7MlxMainC7imgListSay0A6_image0C3ImgCGvp",
+          "moduleName": "mlx_init",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[mlx_image.MlxImg]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "MlxImg",
+                      "printedName": "mlx_image.MlxImg",
+                      "usr": "s:9mlx_image6MlxImgC"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC7imgListSay0A6_image0C3ImgCGvg",
+              "mangledName": "$s8mlx_init7MlxMainC7imgListSay0A6_image0C3ImgCGvg",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[mlx_image.MlxImg]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "MlxImg",
+                      "printedName": "mlx_image.MlxImg",
+                      "usr": "s:9mlx_image6MlxImgC"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC7imgListSay0A6_image0C3ImgCGvs",
+              "mangledName": "$s8mlx_init7MlxMainC7imgListSay0A6_image0C3ImgCGvs",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC7imgListSay0A6_image0C3ImgCGvM",
+              "mangledName": "$s8mlx_init7MlxMainC7imgListSay0A6_image0C3ImgCGvM",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "myMlxApp",
+          "printedName": "myMlxApp",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "AppKit.NSApplication?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NSApplication",
+                  "printedName": "AppKit.NSApplication",
+                  "usr": "c:objc(cs)NSApplication"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8mlx_init7MlxMainC02myC3AppSo13NSApplicationCSgvp",
+          "mangledName": "$s8mlx_init7MlxMainC02myC3AppSo13NSApplicationCSgvp",
+          "moduleName": "mlx_init",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "device",
+          "printedName": "device",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ImplicitlyUnwrappedOptional",
+              "printedName": "Metal.MTLDevice?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "MTLDevice",
+                  "printedName": "Metal.MTLDevice",
+                  "usr": "c:objc(pl)MTLDevice"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8mlx_init7MlxMainC6deviceSo9MTLDevice_pSgvp",
+          "mangledName": "$s8mlx_init7MlxMainC6deviceSo9MTLDevice_pSgvp",
+          "moduleName": "mlx_init",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 3,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ImplicitlyUnwrappedOptional",
+                  "printedName": "Metal.MTLDevice?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "MTLDevice",
+                      "printedName": "Metal.MTLDevice",
+                      "usr": "c:objc(pl)MTLDevice"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC6deviceSo9MTLDevice_pSgvg",
+              "mangledName": "$s8mlx_init7MlxMainC6deviceSo9MTLDevice_pSgvg",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "ImplicitlyUnwrappedOptional",
+                  "printedName": "Metal.MTLDevice?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "MTLDevice",
+                      "printedName": "Metal.MTLDevice",
+                      "usr": "c:objc(pl)MTLDevice"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC6deviceSo9MTLDevice_pSgvs",
+              "mangledName": "$s8mlx_init7MlxMainC6deviceSo9MTLDevice_pSgvs",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC6deviceSo9MTLDevice_pSgvM",
+              "mangledName": "$s8mlx_init7MlxMainC6deviceSo9MTLDevice_pSgvM",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "loopHook",
+          "printedName": "loopHook",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.UnsafeMutableRawPointer?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UnsafeMutableRawPointer",
+                  "printedName": "Swift.UnsafeMutableRawPointer",
+                  "usr": "s:Sv"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8mlx_init7MlxMainC8loopHookSvSgvp",
+          "mangledName": "$s8mlx_init7MlxMainC8loopHookSvSgvp",
+          "moduleName": "mlx_init",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 4,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "loopParam",
+          "printedName": "loopParam",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UnsafeMutableRawPointer",
+              "printedName": "Swift.UnsafeMutableRawPointer",
+              "usr": "s:Sv"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8mlx_init7MlxMainC9loopParamSvvp",
+          "mangledName": "$s8mlx_init7MlxMainC9loopParamSvvp",
+          "moduleName": "mlx_init",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 5,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "loopHookTimer",
+          "printedName": "loopHookTimer",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "CoreFoundation.CFRunLoopTimer?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "CFRunLoopTimer",
+                  "printedName": "CoreFoundation.CFRunLoopTimer",
+                  "usr": "c:@T@CFRunLoopTimerRef"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8mlx_init7MlxMainC13loopHookTimerSo09CFRunLoopG3RefaSgvp",
+          "mangledName": "$s8mlx_init7MlxMainC13loopHookTimerSo09CFRunLoopG3RefaSgvp",
+          "moduleName": "mlx_init",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 6,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "inLoop",
+          "printedName": "inLoop",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8mlx_init7MlxMainC6inLoopSbvp",
+          "mangledName": "$s8mlx_init7MlxMainC6inLoopSbvp",
+          "moduleName": "mlx_init",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 7,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC6inLoopSbvg",
+              "mangledName": "$s8mlx_init7MlxMainC6inLoopSbvg",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC6inLoopSbvs",
+              "mangledName": "$s8mlx_init7MlxMainC6inLoopSbvs",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8mlx_init7MlxMainC6inLoopSbvM",
+              "mangledName": "$s8mlx_init7MlxMainC6inLoopSbvM",
+              "moduleName": "mlx_init",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MlxMain",
+              "printedName": "mlx_init.MlxMain",
+              "usr": "s:8mlx_init7MlxMainC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "hasDefaultArg": true,
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:8mlx_init7MlxMainCyACSicfc",
+          "mangledName": "$s8mlx_init7MlxMainCyACSicfc",
+          "moduleName": "mlx_init",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "addWinToList",
+          "printedName": "addWinToList(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "MlxWin",
+              "printedName": "mlx_window.MlxWin",
+              "usr": "s:10mlx_window6MlxWinC"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8mlx_init7MlxMainC12addWinToListyy0A7_window0cF0CF",
+          "mangledName": "$s8mlx_init7MlxMainC12addWinToListyy0A7_window0cF0CF",
+          "moduleName": "mlx_init",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "addImgToList",
+          "printedName": "addImgToList(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "MlxImg",
+              "printedName": "mlx_image.MlxImg",
+              "usr": "s:9mlx_image6MlxImgC"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8mlx_init7MlxMainC12addImgToListyy0A6_image0cF0CF",
+          "mangledName": "$s8mlx_init7MlxMainC12addImgToListyy0A6_image0cF0CF",
+          "moduleName": "mlx_init",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "addLoopHook",
+          "printedName": "addLoopHook(_:_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.UnsafeMutableRawPointer?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UnsafeMutableRawPointer",
+                  "printedName": "Swift.UnsafeMutableRawPointer",
+                  "usr": "s:Sv"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UnsafeMutableRawPointer",
+              "printedName": "Swift.UnsafeMutableRawPointer",
+              "usr": "s:Sv"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8mlx_init7MlxMainC11addLoopHookyySvSg_SvtF",
+          "mangledName": "$s8mlx_init7MlxMainC11addLoopHookyySvSg_SvtF",
+          "moduleName": "mlx_init",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:8mlx_init7MlxMainC",
+      "mangledName": "$s8mlx_init7MlxMainC",
+      "moduleName": "mlx_init",
+      "declAttributes": [
+        "AccessControl"
+      ]
+    }
+  ],
+  "json_format_version": 6
+}
