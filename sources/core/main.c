@@ -6,14 +6,14 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 12:27:36 by f██████           #+#    #+#             */
-/*   Updated: 2023/02/23 07:01:06 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/03/06 09:50:58 by f██████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
 // General loop of the game which will be executed at best every 15ms
-static int	game_loop_bonus(t_so_long *so_long)
+static int	game_loop(t_so_long *so_long)
 {
 	long long	now;
 	long long	diff_millisecs;
@@ -35,19 +35,6 @@ static int	game_loop_bonus(t_so_long *so_long)
 			show_debug(so_long);
 		show_hud(so_long);
 	}
-	return (1);
-}
-
-// General loop of the game which will be executed when possible
-static int	game_loop_mandatory(t_so_long *so_long)
-{
-	mlx_clear_window(so_long->mlx, so_long->window);
-	player_position(so_long);
-	background(so_long);
-	wall(so_long);
-	item(so_long);
-	gate(so_long);
-	player(so_long);
 	return (1);
 }
 
@@ -74,10 +61,7 @@ int	main(int argc, char *argv[], char **env)
 	//mlx_hook(so_long.window, 17, 1L << 0, close_hook, &so_long);
 	//mlx_hook(so_long.window, 2, 0, keydown_hook, &so_long);
 	//mlx_key_hook(so_long.window, keyup_hook, &so_long);
-	if (so_long.bonus == 1)
-		mlx_loop_hook(so_long.mlx, game_loop_bonus, &so_long);
-	else
-		mlx_loop_hook(so_long.mlx, game_loop_mandatory, &so_long);
+	mlx_loop_hook(so_long.mlx, game_loop, &so_long);
 	mlx_loop(so_long.mlx);
 	exit(EXIT_SUCCESS);
 }

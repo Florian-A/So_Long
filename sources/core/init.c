@@ -6,7 +6,7 @@
 /*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 12:27:36 by f██████           #+#    #+#             */
-/*   Updated: 2022/09/08 10:48:45 by f██████          ###   ########lyon.fr   */
+/*   Updated: 2023/03/06 09:50:58 by f██████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 // Initialization of the t_so_long structure
 void	init_s_so_long(char *argv[], t_so_long *so_long)
 {
-	so_long->bonus = is_bonus();
 	so_long->mlx = mlx_init();
 	so_long->lm = 0;
 	so_long->gw = -1;

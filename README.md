@@ -18,12 +18,6 @@ Pour compiler le projet, exécutez la commande suivante :
 make
 ```
 
-Ou avec les bonus :
-
-```
-make bonus
-```
-
 Pour compiler les tests unitaires, exécutez la commande suivante :
 
 ```
@@ -43,7 +37,7 @@ Exemple :
 Ou
 
 ```
-./so_long-bonus ./maps/map.ber DEBUG=0
+./so_long ./maps/map.ber DEBUG=0
 ```
 
 Les tests unitaires s'executent de la façon suivante :
