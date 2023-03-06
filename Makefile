@@ -6,7 +6,7 @@
 #    By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 12:33:02 by f██████           #+#    #+#              #
-#    Updated: 2023/03/06 09:50:58 by f██████          ###   ########lyon.fr    #
+#    Updated: 2023/03/06 10:33:26 by f██████          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -107,7 +107,7 @@ _test :
 	@make test -C ./libft DEBUG=$(DEBUG)
 
 _mlx :
-	make -C $(GPATH)
+	@make -C $(GPATH)
 
 test: _libft _mlx _test $(UTEST_NAME)
 
