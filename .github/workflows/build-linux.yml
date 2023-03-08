@@ -1,4 +1,4 @@
-name: norminette
+name: build linux
 
 on:
   push:
@@ -9,9 +9,10 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
+        swift: ["5.5"]
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v3
       
-    - name: norminette
-      run: python3 -m pip install --upgrade pip setuptools && python3 -m pip install norminette && norminette ./sources/
+    - name: build linux
+      run: make
