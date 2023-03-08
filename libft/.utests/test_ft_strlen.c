@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_ft_strlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: ███████ <███████@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 01:04:58 by f██████           #+#    #+#             */
-/*   Updated: 2023/03/08 18:33:19 by f██████          ###   ########.fr       */
+/*   Created: 2022/04/14 00:40:56 by ███████           #+#    #+#             */
+/*   Updated: 2022/05/10 11:06:53 by ███████          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/utest.h"
 
-void	test_block1(t_test *test)
+int	test_ft_strlen(void)
 {
-	utest(test_null(), "null", test);
-}
+	char	*s1;
 
-int	main(void)
-{
-	t_test	test;
-
-	test.type = 1;
-	test_init_struct(&test);
-	test_show_start(&test);
-	test_block1(&test);
-	test_show_result(&test);
+	s1 = "";
+	if (ft_strlen(s1) != 0)
+		return (-1);
+	s1 = "test";
+	if (ft_strlen(s1) != 4)
+		return (-1);
+	s1 = "pif\0paf";
+	if (ft_strlen(s1) != 3)
+		return (-1);
+	return (0);
 }

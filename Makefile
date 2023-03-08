@@ -6,7 +6,7 @@
 #    By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 12:33:02 by f██████           #+#    #+#              #
-#    Updated: 2023/03/06 14:15:02 by f██████          ###   ########.fr        #
+#    Updated: 2023/03/08 18:45:00 by f██████          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,7 +114,7 @@ _mlx :
 test: _libft _mlx _test $(UTEST_NAME)
 
 $(UTEST_NAME) : $(MF) $(OBJS_UTEST) $(LIBTEST_PATH) $(LIBFT_PATH)
-	@$(CC) $(CFLAGS) $(OBJS_UTEST) $(LIBTEST_PATH) $(LIBFT_PATH) $(MLX_PATH) -o $(UTEST_NAME)
+	@$(CC) $(CFLAGS) $(OBJS_UTEST) $(LIBTEb	ST_PATH) $(LIBFT_PATH) $(MLX_PATH) -o $(UTEST_NAME)
 	@echo "\n${GREEN}> Compilation of unit tests is success 🎉${END}"
 
-.PHONY:	all clean fclean re lib
+.PHONY:	all test clean fclean re lib

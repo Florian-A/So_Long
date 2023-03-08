@@ -6,7 +6,7 @@
 #    By: f██████ <f██████@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 11:45:53 by f██████           #+#    #+#              #
-#    Updated: 2023/02/21 01:07:54 by f██████          ###   ########lyon.fr    #
+#    Updated: 2023/03/08 18:51:30 by f██████          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ SRC_STR	= $(addprefix $(SRC_DIR)/str/, \
 ft_split.c ft_strchr_i.c ft_strchr.c ft_strdup.c ft_strndup.c \
 ft_striteri.c ft_strjoin.c ft_strnjoin.c ft_strlcat.c ft_strlcpy.c \
 ft_strlen.c ft_strmapi.c ft_strcmp.c ft_strncmp.c ft_strnstr.c \
-ft_strnstr_i.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_isnbr.c \
+ft_strnstr_i.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_isnbr.c ft_str_repl.c \
 )
 
 # file descriptor
